@@ -1,0 +1,15 @@
+*******
+Pyramid
+*******
+The aim of the game is to progress through each row of the pyramid from bottom to top. 
+The player is prompted to select a hidden card from the current row. The player can
+progress to the next row up if the card is NOT a face card (see below). If the player
+selects a face card, a drink must be consumed, the pyramid is reset, and they must 
+start again from the bottom. The player wins if they draw a card from every row while
+avoiding any cards with a face value. Enjoy!
+
+Face Cards:
+4 x ACE
+4 x Jack
+4 x Queen
+4 x King

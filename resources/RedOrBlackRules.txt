@@ -1,0 +1,10 @@
+************
+Red or Black 
+************
+
+The aim of the game is to select the correct colour of the next drawn card from the deck.
+The colour of the card is based on the suit. Clubs and Spades are black, while Diamonds and Hearts
+are red. The player will be prompted to select whether or not they believe the next card to be
+red or black. If they are correct, the player will move on to the next card without consequence.
+If they are incorrect, then they will be required to take a sip of their drink. The game continues
+until the deck is empty, or if the user taps out. Enjoy! ;)
