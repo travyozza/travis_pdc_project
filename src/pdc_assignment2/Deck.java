@@ -31,6 +31,10 @@ public class Deck{
         return deck;
     }
     
+    public boolean isEmpty(){
+        return (deck.isEmpty());
+    }
+    
     //Draws random card from deck. Removed the need for shuffling.
     public Card DrawCard()
     {
