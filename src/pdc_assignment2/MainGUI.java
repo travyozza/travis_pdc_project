@@ -18,6 +18,7 @@ public class MainGUI extends javax.swing.JFrame {
         initComponents();
     }
 
+    //Make game selection buttons visible
     public void loadMenuButtons(){
         robButton.setVisible(true);
         pyramidButton.setVisible(true);
@@ -169,6 +170,7 @@ public class MainGUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    //Confirm username and enter Main Menu panel
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
         if (jTextField1.getText().trim().equals(""))
         {
@@ -187,6 +189,7 @@ public class MainGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_confirmButtonActionPerformed
 
+    //Load Red or Black game
     private void robButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_robButtonActionPerformed
         mainPanel.removeAll();
         mainPanel.add(new RedOrBlackView(player));
@@ -198,6 +201,7 @@ public class MainGUI extends javax.swing.JFrame {
         menuButton.setVisible(true);
     }//GEN-LAST:event_robButtonActionPerformed
 
+    //Load Pyramid game
     private void pyramidButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pyramidButtonActionPerformed
         mainPanel.removeAll();
         mainPanel.add(new PyramidView(player));
@@ -209,6 +213,7 @@ public class MainGUI extends javax.swing.JFrame {
         menuButton.setVisible(true);
     }//GEN-LAST:event_pyramidButtonActionPerformed
 
+    //Go back to menu
     private void menuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuButtonActionPerformed
         mainPanel.removeAll();
         mainPanel.add(new MenuPanel(player));
@@ -218,6 +223,7 @@ public class MainGUI extends javax.swing.JFrame {
         loadMenuButtons();
     }//GEN-LAST:event_menuButtonActionPerformed
 
+    //Close database and end session
     private void saveExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveExitButtonActionPerformed
         player.endSession();
         System.exit(0);
