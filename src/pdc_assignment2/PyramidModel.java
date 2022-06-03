@@ -30,6 +30,7 @@ public class PyramidModel{
         }
     }
     
+    //Redraw new pyramid
     public void reinitializePyramid(){
         this.deck = new Deck();
         this.card_pyramid = new ArrayList<Card>();
@@ -41,6 +42,7 @@ public class PyramidModel{
     
     }
     
+    //Select card in pyramid and show
     public void selectCard(int num){
         current_card = card_pyramid.get(num);
         if (!this.card_pyramid.get(num).isFace())
