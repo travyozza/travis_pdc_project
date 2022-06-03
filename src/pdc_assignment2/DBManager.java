@@ -44,7 +44,8 @@ public final class DBManager {
             }
         }
     }
-
+    
+    //Close connection
     public void closeConnections() {
         if (conn != null) {
             try {
@@ -55,6 +56,7 @@ public final class DBManager {
         }
     }
 
+    //Return ResultSet of database query
     public ResultSet queryDB(String sql) {
 
         Connection connection = this.conn;
@@ -71,6 +73,7 @@ public final class DBManager {
         return resultSet;
     }
 
+    //Update database information
     public void updateDB(String sql) {
 
         Connection connection = this.conn;
