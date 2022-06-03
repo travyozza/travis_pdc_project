@@ -157,6 +157,7 @@ public class RedOrBlackView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    //User guesses Red
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         rob.getAnswer("red");
         jLabel4.setText(rob.result);
@@ -166,6 +167,7 @@ public class RedOrBlackView extends javax.swing.JPanel {
         jButton2.setEnabled(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    //User guesses black
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         rob.getAnswer("black");
         jLabel4.setText(rob.result);
@@ -175,6 +177,7 @@ public class RedOrBlackView extends javax.swing.JPanel {
         jButton1.setEnabled(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    //Draw card
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         rob.generateDraw();
         jLabel2.setText(Integer.toString(rob.deck.getDeck().size()));
