@@ -23,6 +23,7 @@ public class GameDatabase {
         conn = dbmanager.getConnection();
     }
     
+    //Connect to embedded database
     public void connectGameDB() {
         try {
             this.statement = conn.createStatement();
@@ -38,6 +39,7 @@ public class GameDatabase {
         }
     }
     
+    //Create record of players current session
     public void createPlayerRecord(Player p){
         try{
             this.statement = conn.createStatement();
@@ -51,21 +53,25 @@ public class GameDatabase {
     
     }
     
+    //Update player drink stats in database
     public void updateDrinks(Player p){
         String sql = "UPDATE OVERALLSTATS SET TOTALDRINKS = " + p.getDrinks() + " WHERE USER = " + "'" + p.getName() + "'";
         this.dbmanager.updateDB(sql);
     }
     
+    //Update player Pyramid stats in database
     public void updatePyramidStats(Player p){
         String sql = "UPDATE PYRAMIDSTATS SET PYRAMIDSCOMPLETED = " + p.getPyramids_completed() + ", PYRAMIDSFAILED = " + p.getPyramid_failed() + " WHERE USER = " + "'" + p.getName() + "'";
         this.dbmanager.updateDB(sql);
     }
     
+    //Update player Red or Black stats in database
     public void updateROBStats(Player p){
         String sql = "UPDATE REDORBLACKSTATS SET REDORBLACKCORRECT = " + p.getRedOrBlack_correct_guesses() + " WHERE USER = " + "'" + p.getName() + "'";
         this.dbmanager.updateDB(sql);
     }
     
+    //Check if table exists in database
     public void checkExistedTable(String name) {
         try {
             DatabaseMetaData dbmd = this.conn.getMetaData();
@@ -88,12 +94,7 @@ public class GameDatabase {
         }
     }
     
-    public static void main(String[] args) {
-        GameDatabase gd = new GameDatabase();
-        gd.connectGameDB();
-        
-    }
-    
+    //Close the connection
     public void closeConnection() {
         this.dbmanager.closeConnections();
     }
