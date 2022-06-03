@@ -91,6 +91,7 @@ public class RedOrBlackView extends javax.swing.JPanel {
 
         jLabel2.setText("52");
 
+        deckcompleteLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         deckcompleteLabel.setText("Deck Complete!");
         deckcompleteLabel.setVisible(false);
 
@@ -122,11 +123,13 @@ public class RedOrBlackView extends javax.swing.JPanel {
                         .addGap(234, 234, 234)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
-                            .addComponent(jButton3)
-                            .addComponent(deckcompleteLabel)))
+                            .addComponent(jButton3)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(274, 274, 274)
-                        .addComponent(jLabel2)))
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(213, 213, 213)
+                        .addComponent(deckcompleteLabel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -142,13 +145,13 @@ public class RedOrBlackView extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addGap(47, 47, 47)
+                .addGap(4, 4, 4)
+                .addComponent(deckcompleteLabel)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(37, 37, 37)
-                .addComponent(deckcompleteLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(21, 21, 21))
         );
