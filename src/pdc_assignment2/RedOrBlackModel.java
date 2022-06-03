@@ -22,11 +22,13 @@ public class RedOrBlackModel{
         this.round_number = 0;
     }
     
+    //Draw card for selection
     public void generateDraw(){
         drawn_card = deck.DrawCard();
         round_number++;
     }
     
+    //Check if drawn card is red or black 
     public void getAnswer(String answer){
         if (answer.equals("red") && drawn_card.isRed())
         {
@@ -43,6 +45,7 @@ public class RedOrBlackModel{
         }
     }
     
+    //Checks if Red or Black deck is empty
     public boolean isdeckEmpty(){
         return (deck.isEmpty());
     }
