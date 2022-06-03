@@ -11,10 +11,19 @@ package pdc_assignment2;
 public class Player {
     private final String name;
     private int drinks;
+    private int pyramids_completed;
+    private int pyramid_failed;
+    private int redOrBlack_correct_guesses;
+    private GameDatabase gameDB;
 
     public Player(String name) {
         this.name = name;
         this.drinks = 0;
+        this.pyramids_completed = 0;
+        this.pyramid_failed = 0;
+        this.redOrBlack_correct_guesses = 0;
+        this.gameDB = new GameDatabase();
+        this.gameDB.connectGameDB();
     }
 
     public String getName() {
@@ -27,20 +36,31 @@ public class Player {
 
     public void addDrink(){
         this.drinks++;
+        gameDB.updateDrinks(this);
     }
     
-    //For grammar purposes within games
-    public String drinkPlural(){
-        if (this.getDrinks() == 1)
-        {
-            return " drink";
-        }
-        else
-        {
-            return " drinks";
-        }
+    public void pyramidComplete(){
+        this.pyramids_completed++;
     }
     
+    public void redOrBlackCorrect(){
+        this.redOrBlack_correct_guesses++;
+    }
     
+    public void pyramidReset(){
+        this.pyramid_failed++;
+    }
+
+    public int getPyramids_completed() {
+        return pyramids_completed;
+    }
+
+    public int getPyramid_failed() {
+        return pyramid_failed;
+    }
+
+    public int getRedOrBlack_correct_guesses() {
+        return redOrBlack_correct_guesses;
+    }
     
 }
