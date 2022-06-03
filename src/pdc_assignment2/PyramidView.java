@@ -30,8 +30,6 @@ public class PyramidView extends javax.swing.JPanel {
         jButton13.setEnabled(false);
         jButton14.setEnabled(false);
         jButton15.setEnabled(false);
-        jButton16.setVisible(false);
-        jButton17.setVisible(false);
         jLabel3.setVisible(false);
     }
     
@@ -155,9 +153,6 @@ public class PyramidView extends javax.swing.JPanel {
         jLabel4.setVisible(false);
         jLabel5.setVisible(false);
         
-        jButton16.setVisible(true);
-        jButton17.setVisible(true);
-        
         jLabel3.setText("Congratulations " + player.getName() + "! You've completed the pyramid!" );
         jLabel3.setVisible(true);
         this.repaint();
@@ -192,8 +187,6 @@ public class PyramidView extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -313,15 +306,6 @@ public class PyramidView extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel6.setText("Player: " + player.getName());
 
-        jButton16.setText("Play Again!");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
-            }
-        });
-
-        jButton17.setText("Exit");
-
         jLabel3.setText("jLabel3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -380,12 +364,7 @@ public class PyramidView extends javax.swing.JPanel {
                         .addComponent(jButton12))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(252, 252, 252)
-                        .addComponent(jButton15))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(189, 189, 189)
-                        .addComponent(jButton16)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton17)))
+                        .addComponent(jButton15)))
                 .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -399,11 +378,7 @@ public class PyramidView extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton16)
-                    .addComponent(jButton17))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addComponent(jButton15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -526,10 +501,6 @@ public class PyramidView extends javax.swing.JPanel {
         this.repaint();
     }//GEN-LAST:event_jButton15ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-       
-    }//GEN-LAST:event_jButton16ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -539,8 +510,6 @@ public class PyramidView extends javax.swing.JPanel {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
