@@ -24,6 +24,7 @@ public class Player {
         this.redOrBlack_correct_guesses = 0;
         this.gameDB = new GameDatabase();
         this.gameDB.connectGameDB();
+        this.gameDB.createPlayerRecord(this);
     }
 
     public String getName() {
@@ -41,14 +42,17 @@ public class Player {
     
     public void pyramidComplete(){
         this.pyramids_completed++;
+        this.gameDB.updatePyramidStats(this);
     }
     
     public void redOrBlackCorrect(){
         this.redOrBlack_correct_guesses++;
+        this.gameDB.updateROBStats(this);
     }
     
     public void pyramidReset(){
         this.pyramid_failed++;
+        this.gameDB.updatePyramidStats(this);
     }
 
     public int getPyramids_completed() {
@@ -63,4 +67,8 @@ public class Player {
         return redOrBlack_correct_guesses;
     }
     
+    public void endSession(){
+        this.gameDB.closeConnection();
+    }
+        
 }
