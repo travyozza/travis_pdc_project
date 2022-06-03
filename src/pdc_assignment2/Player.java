@@ -35,21 +35,25 @@ public class Player {
         return this.drinks;
     }
 
+    //Add drink to player and update database with drink stats
     public void addDrink(){
         this.drinks++;
         gameDB.updateDrinks(this);
     }
     
+    //Update database with Pyramid stats
     public void pyramidComplete(){
         this.pyramids_completed++;
         this.gameDB.updatePyramidStats(this);
     }
     
+    //Update database with Red or Black stats
     public void redOrBlackCorrect(){
         this.redOrBlack_correct_guesses++;
         this.gameDB.updateROBStats(this);
     }
     
+    //Update database with Pyramid stats
     public void pyramidReset(){
         this.pyramid_failed++;
         this.gameDB.updatePyramidStats(this);
@@ -67,6 +71,7 @@ public class Player {
         return redOrBlack_correct_guesses;
     }
     
+    //End game session in database
     public void endSession(){
         this.gameDB.closeConnection();
     }
