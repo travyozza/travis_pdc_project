@@ -33,6 +33,7 @@ public class PyramidView extends javax.swing.JPanel {
         jLabel3.setVisible(false);
     }
     
+    //Update buttons in pyramid based on game state
     public void updatePyramidGUI(){
         this.repaint();
         jLabel5.setText(pyramid.result);
@@ -134,6 +135,7 @@ public class PyramidView extends javax.swing.JPanel {
     
     }
     
+    //Load end game buttons
     public void loadEndGame(){
         jButton1.setVisible(false);
         jButton2.setVisible(false);
@@ -410,6 +412,7 @@ public class PyramidView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    //Buttons which hide a card value for Pyramid
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         pyramid.selectCard(0);
         updatePyramidGUI();
