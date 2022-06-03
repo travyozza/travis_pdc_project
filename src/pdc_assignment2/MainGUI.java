@@ -36,6 +36,7 @@ public class MainGUI extends javax.swing.JFrame {
         menuButton = new javax.swing.JButton();
         robButton = new javax.swing.JButton();
         pyramidButton = new javax.swing.JButton();
+        saveExitButton = new javax.swing.JButton();
         mainPanel = new javax.swing.JPanel();
         userCreatePanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -77,6 +78,14 @@ public class MainGUI extends javax.swing.JFrame {
             }
         });
 
+        saveExitButton.setText("Save & Exit");
+        saveExitButton.setVisible(false);
+        saveExitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveExitButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -84,11 +93,13 @@ public class MainGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(menuButton)
-                .addGap(99, 99, 99)
+                .addGap(113, 113, 113)
                 .addComponent(robButton)
                 .addGap(29, 29, 29)
                 .addComponent(pyramidButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addComponent(saveExitButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(confirmButton)
                 .addContainerGap())
         );
@@ -100,7 +111,8 @@ public class MainGUI extends javax.swing.JFrame {
                     .addComponent(confirmButton)
                     .addComponent(menuButton)
                     .addComponent(robButton)
-                    .addComponent(pyramidButton))
+                    .addComponent(pyramidButton)
+                    .addComponent(saveExitButton))
                 .addContainerGap())
         );
 
@@ -170,6 +182,7 @@ public class MainGUI extends javax.swing.JFrame {
             mainPanel.repaint();
             mainPanel.revalidate();
             confirmButton.setVisible(false);
+            saveExitButton.setVisible(true);
             loadMenuButtons();
         }
     }//GEN-LAST:event_confirmButtonActionPerformed
@@ -204,6 +217,11 @@ public class MainGUI extends javax.swing.JFrame {
         menuButton.setVisible(false);
         loadMenuButtons();
     }//GEN-LAST:event_menuButtonActionPerformed
+
+    private void saveExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveExitButtonActionPerformed
+        player.endSession();
+        System.exit(0);
+    }//GEN-LAST:event_saveExitButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -249,6 +267,7 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JButton menuButton;
     private javax.swing.JButton pyramidButton;
     private javax.swing.JButton robButton;
+    private javax.swing.JButton saveExitButton;
     private javax.swing.JPanel userCreatePanel;
     private javax.swing.JLabel usernameError;
     // End of variables declaration//GEN-END:variables
